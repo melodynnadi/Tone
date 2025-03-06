@@ -47,6 +47,10 @@ nav ul li a {
   font-weight: 500;
 }
 
+nav ul li a:hover{
+  color: #ff6f61;
+}
+
 
 /* Hero-Section */
 .hero {
@@ -314,6 +318,8 @@ nav ul li a {
 .gallery-section {
   text-align: center; 
   margin-bottom: 50px;
+  align-items: center;
+  align-content: center;
 }
 
 /* Footer-Section */
