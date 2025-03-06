@@ -22,16 +22,36 @@ const countdown = () => {
   
 setInterval(countdown, 1000);
 
-let currentSlide = 0;
-        const slides = document.querySelectorAll('.gallery-slides img');
-        const totalSlides = slides.length;
+// Filtering images
+const filterButtons = document.querySelectorAll('.filter-btn');
+const galleryItems = document.querySelectorAll('.gallery-item');
 
-        function showNextSlide() {
-            slides[currentSlide].classList.remove("active");
-            currentSlide = (currentSlide + 1) % totalSlides;
-            slides[currentSlide].classList.add("active");
-        }
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
 
-        // Change slide every 3 seconds
-        setInterval(showNextSlide, 3000);
+        const category = button.getAttribute('data-category');
+
+        galleryItems.forEach(item => {
+            if (category === 'all' || item.getAttribute('data-category') === category) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    });
+});
+
+// Carousel functionality
+const gallery = document.querySelectorAll('.gallery-item img');
+const carousel = document.querySelector('.carousel');
+const carouselImage = document.querySelector('.carousel-image');
+const closeBtn = document.querySelector('.close');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+
+let currentIndex = 0;
+
   
