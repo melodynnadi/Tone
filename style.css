@@ -441,24 +441,53 @@ nav ul li a:hover{
   margin-bottom: 60px;
 }
 
+.about-card:hover{
+  background: #ff6f61;
+}
+
 .about-section h2 {
   font-size: 50px;
   text-align: center;
 }
 
-.about-card h2{
+.about-card h3{
   color: #000;
+  text-align: center;
+  font-size: 24px;
 }
 
-.event-card:hover {
+.about-card:hover {
   transform: scale(1.05);
 }
 
-.about-card i{
-  text-align: center;
-  font-size: 80px;
+.about-card i {
+  display: block; /* Ensures the icon is centered */
+  text-align: center; /* Centers the icon horizontally */
+  font-size: 70px; /* Keeps the large font size */
   color: #000;
-  align-content: center;
+  margin-top: 20px; /* Adds some space above the icon */
+  margin-bottom: 10px; /* Reduces space between the icon and the h2 */
+}
+
+.about-card hr {
+  color: #ff6f61;
+  width: 30%; /* Makes the line shorter */
+  margin: 0 auto; /* Centers the line horizontally */
+  margin-top: -35px;
+  border: none; /* Removes default border styling */
+  border-top: 3px solid #ff6f61; /* Creates a thicker horizontal line */
+}
+
+.about-card:hover hr {
+  border-top-color: #000; /* Changes the line color to black on hover */
+}
+
+.about-card p {
+  text-align: center; /* Centers the paragraph text */
+  font-family: Arial, sans-serif; /* Changes font to a cleaner style */
+  font-size: 14px; /* Adjusts font size for readability */
+  color: #333; /* Uses a slightly lighter color for better contrast */
+  padding: 0 20px; /* Adds horizontal padding to the sides */
 }
 
 /* Footer-Section */
