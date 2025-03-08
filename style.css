@@ -35,22 +35,31 @@ header .logo h1 {
   font-weight: bolder;
 }
 
+/* General Navbar Styles */
 nav ul {
   list-style: none;
   display: flex;
   gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  position: relative; /* Important for dropdown positioning */
 }
 
 nav ul li a {
   color: #fff;
   text-decoration: none;
   font-weight: 500;
+  display: block;
+  text-align: left;
 }
 
-nav ul li a:hover{
+nav ul li a:hover {
   color: #ff6f61;
 }
-
 
 /* Hero-Section */
 .hero {
@@ -429,7 +438,7 @@ nav ul li a:hover{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 40px;
 }
 
 .about-card {
@@ -492,45 +501,69 @@ nav ul li a:hover{
 
 /* Team-Section */
 .team-section{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
   background: #000;
-}
-
-.wrapper .title{
   text-align: center;
 }
 
-.title h2{
-  font-size: 50px;
-
-}
-
-.wrapper .card_Container{
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  margin: 40px 0;
-}
-
-.card_Container .team-card{
-  position: relative;
-  width: 300px;
-  height: 400px;
-  margin: 20px;
+.inner-width{
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.team-card img{
-  width: 100%;
-  height: 100%;
+.team-section h1{
+  font-size: 50px;
+  display: inline-block;
+}
+
+.pe{
+  float: left;
+  width: calc(100% / 4);
+  overflow: hidden;
+  padding: 20px 0;
+  transition: 0.4s;
+}
+
+.pe img{
+  width: 200px;
+}
+
+.p-name{
+  margin: 0px 0;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.p-des{
+  font-style: italic;
+  color: #ff6f61;
+}
+
+.p-sm{
+  margin-top: 3px;
+}
+
+.p-sm a{
+  margin: 0 4px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  transition: 0.4s;
+}
+
+.p-sm a i{
+  color: #fff;
+  line-height: 30px;
+}
+
+.p-sm a i:hover{
+  color: #ff6f61;
+}
+@media screen and (max-width:600px) {
+  .pe{
+    width: 100%;
+  }
 }
 
 /* Footer-Section */
