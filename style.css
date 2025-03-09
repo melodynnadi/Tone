@@ -16,6 +16,9 @@ header {
   align-items: center;
   padding: 20px;
   background: #000;
+  position: relative;
+  z-index: 1000;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); 
 }
 
 header .logo {
@@ -61,6 +64,40 @@ nav ul li a:hover {
   color: #ff6f61;
 }
 
+nav ul .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #333;
+  padding: 10px 0;
+  min-width: 150px;
+  list-style: none;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav ul .dropdown-menu li {
+  display: block;
+  text-align: left;
+  padding: 5px 10px;
+}
+
+nav ul .dropdown-menu li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 1px 1px;
+}
+
+nav ul .dropdown-menu li a:hover {
+  color: #ff6f61;
+}
+
+/* Show dropdown on hover */
+nav ul .dropdown:hover .dropdown-menu {
+  display: block;
+}
+
 /* Hero-Section */
 .hero {
   background: url('https://ucb0ba691f2a38bd7060fc83483a.previews.dropboxusercontent.com/p/thumb/ACnNl5ckcEgyUcXhifeXm7CHgYmgmGKHYjRC7Wpva9TIXEcsFX6raDwaG-cAe_8BiFm55WGHKfzZ0fRwxrHIjj5pI4t5MzFPI0KsnT8z0lnjeA5cWhU_3d8R3ci7xRtHbiMgQ_gDrL2vmd_WnRyqnSovIhxDUiIdASMDD8HyZoKa5ccNDlUjJJ0ZeHbBj85-b7NivUlyXDeiteKQNkhhkOgdk4NX1Uehf-fSvJVvES3KNEG__MiL_0V4HcC4TseqnTiJzJCKpcYXL1ZgWmE2IcmAQcdgnDfJSPC8H55dgLLlRipq9gtaRtvDNMHYiSHR8_fvg3TvJzIRyG8RW-BVeSbiDXpld1ACsgx_7dVmLgitNGRI2CruvxsfKsU8gMVpXmL5Vry8lUsh29mUtl62E4UMLkrEL1OH0F4jSWnhIwuyYhFc9NSmMtWDJIOE2Y7pJerpJRot-4IUD8jjPco75dymFflfqDnBZ3qeKX6jXWSTUW8wWc_bkYhSsbkngamIg7xPvhL4GdC0Ey4K5hmM4Etn_Z-4ylgN-Zsl5SisIllFdAtx6x_VYweWUFnA0BlxNlVvM4GEEXV38ARyb1BTLv2m6SdzMjW_F4vfGJkMlocDjsEJBWvKlX3cTYxNXYdxvxUwpLiPO2GDACjIgeskujOz/p.jpeg') no-repeat center center/cover;
@@ -73,6 +110,7 @@ nav ul li a:hover {
   color: #fff;
   position: relative;
   padding-left: 70px;
+  z-index: 1;
 }
 
 .hero::before {
@@ -517,12 +555,16 @@ nav ul li a:hover {
   display: inline-block;
 }
 
-.pe{
-  float: left;
+.pe {
   width: calc(100% / 4);
-  overflow: hidden;
-  padding: 20px 0;
+  padding: 20px;
   transition: 0.4s;
+}
+
+.pers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .pe img{
@@ -572,6 +614,9 @@ footer {
   color: #fff;
   text-align: center;
   padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* Ensure it appears correctly */
+  position: relative; /* Ensures it stacks properly */
 }
 
 .social-links {
