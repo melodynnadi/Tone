@@ -71,7 +71,7 @@ nav ul .dropdown-menu {
   right: 0;
   background: #333;
   padding: 10px 0;
-  min-width: 150px;
+  min-width: 100px;
   list-style: none;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -93,7 +93,6 @@ nav ul .dropdown-menu li a:hover {
   color: #ff6f61;
 }
 
-/* Show dropdown on hover */
 nav ul .dropdown:hover .dropdown-menu {
   display: block;
 }
@@ -297,10 +296,17 @@ nav ul .dropdown:hover .dropdown-menu {
 
 /* Gallery Section */
 .gallery-section {
+  background-color: #1a1a1a;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 80px;
+  z-index: 5;
+}
+
+.gallery-section::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
 .gallery-section h2{
@@ -378,6 +384,7 @@ nav ul .dropdown:hover .dropdown-menu {
   justify-content: center;
   margin: -10px 0; 
   height: 50px; 
+  margin-bottom: 50px;
 }
 
 .gallery-controls button {
@@ -539,7 +546,7 @@ nav ul .dropdown:hover .dropdown-menu {
 
 /* Team-Section */
 .team-section{
-  background: #000;
+  background: #1a1a1a;
   text-align: center;
 }
 
@@ -556,7 +563,7 @@ nav ul .dropdown:hover .dropdown-menu {
 }
 
 .pe {
-  width: calc(100% / 4);
+  width: calc(100% / 5);
   padding: 20px;
   transition: 0.4s;
 }
@@ -611,12 +618,13 @@ nav ul .dropdown:hover .dropdown-menu {
 /* Footer-Section */
 footer {
   background: #000;
+  height: auto;
   color: #fff;
   text-align: center;
   padding: 20px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  z-index: 1000; /* Ensure it appears correctly */
-  position: relative; /* Ensures it stacks properly */
+  z-index: 10;
+  position: relative;
 }
 
 .social-links {
