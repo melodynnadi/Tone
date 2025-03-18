@@ -14,7 +14,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
   background: #000;
   position: relative;
   z-index: 1000;
@@ -33,9 +33,16 @@ header .logo img {
 
 header .logo h1 {
   margin: 0;
-  padding-left: -10px;
-  font-size: 2rem;
+  margin-left: -15px;
+  font-size: 3.5rem;
   font-weight: bolder;
+  letter-spacing: -4px;
+}
+
+header .logo h1 sup{
+  margin-left: -3px;
+  font-size: 10px;
+  letter-spacing: normal;
 }
 
 /* General Navbar Styles */
@@ -99,7 +106,7 @@ nav ul .dropdown:hover .dropdown-menu {
 
 /* Hero-Section */
 .hero {
-  background: url('https://uca19e1fa3e32c61b669cf84fcf7.previews.dropboxusercontent.com/p/thumb/ACk1EIglX-dusdPjCNDGfguRoQauztlNxfsYM91Ir7k0Q6iDGLWEf8ZcHaLXk7WhogCri5wOhjHC2X4npdL7c3A_C5DT_o-M9U6W77J-xT3MIxOhL0sQlzL_Un5xte2mElorkbAYlKC4lejMZVSwaky0JbuFSlWO-QXyrINUbUP7Ol8jF83f1y_RH8Q6qJY-ymEH6LX9Sr_NF0L9ibB40n4TTke4ERkyqeaD9AH3unOnpHr1hJRehdTCsSs5SK2Mw2aT48rBfj2RmdRMLdE-pMB_MRm6-o3CQCqJEB0RaAYw-9TsfzaysdpTYniEEzFLJR-YO53Vapk97hsnG9d8Tldior3JsYRCqR9doubr7NFr298GwVPhxH7JdY5FaQQqfJjZgWV7o-d-XMxsUrdzVkKmae0BiAkob9bpwENp_Ho3Kg/p.jpeg') no-repeat center center/cover;
+  background: url('Valentine.jpg') no-repeat center center/cover;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -161,6 +168,48 @@ nav ul .dropdown:hover .dropdown-menu {
   display: flex;
   gap: 10px;
   font-size: 2rem;
+}
+
+/* Marquee Container */
+@import url('https://fonts.googleapis.com/css2?family-Roboto&display=swap');
+
+.marquee{
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: flex-start;
+  background: #ff6f61;
+  overflow: hidden;
+}
+
+.marquee h1{
+  font-size: 25px;
+  font-weight: bolder;
+  color: #fff;
+  white-space: nowrap;
+  padding: 0 4rem;
+  letter-spacing: 1px;
+  animation: move-rtl 6000ms linear infinite;
+}
+
+@keyframes move-rtl{
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(-100%);
+  }
+}
+
+/* Keyframes for Scrolling Effect */
+@keyframes move-rtl {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 /* Events-Section */
