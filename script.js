@@ -100,3 +100,4 @@ class Carousel {
   exampleCarousel.useControls();
   exampleCarousel.startAutoScroll();
   
+
