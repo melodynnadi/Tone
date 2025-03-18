@@ -14,7 +14,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 2px;
   background: #000;
   position: relative;
   z-index: 1000;
@@ -65,6 +65,10 @@ nav ul li a {
   font-weight: 500;
   display: block;
   text-align: left;
+}
+
+nav ul li:last-child{
+  margin-left: 5px;
 }
 
 nav ul li a:hover {
@@ -176,7 +180,7 @@ nav ul .dropdown:hover .dropdown-menu {
 .marquee{
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
   display: flex;
   justify-content: flex-start;
   background: #ff6f61;
@@ -184,11 +188,11 @@ nav ul .dropdown:hover .dropdown-menu {
 }
 
 .marquee h1{
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bolder;
   color: #fff;
   white-space: nowrap;
-  padding: 0 4rem;
+  padding: 0 0.5rem;
   letter-spacing: 1px;
   animation: move-rtl 6000ms linear infinite;
 }
@@ -198,16 +202,6 @@ nav ul .dropdown:hover .dropdown-menu {
     transform: translateX(0);
   }
   100%{
-    transform: translateX(-100%);
-  }
-}
-
-/* Keyframes for Scrolling Effect */
-@keyframes move-rtl {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
     transform: translateX(-100%);
   }
 }
@@ -226,9 +220,9 @@ nav ul .dropdown:hover .dropdown-menu {
 
 .event-grid {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
+  justify-content: center;
 }
 
 .event-card {

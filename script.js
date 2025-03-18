@@ -100,4 +100,39 @@ class Carousel {
   exampleCarousel.useControls();
   exampleCarousel.startAutoScroll();
   
+  document.addEventListener("DOMContentLoaded", () => {
+    const eventGrid = document.querySelector(".event-grid");
+    const events = document.querySelectorAll(".event-card");
+    const prevArrow = document.querySelector(".prev-arrow");
+    const nextArrow = document.querySelector(".next-arrow");
+  
+    let currentIndex = 0;
+  
+    // Function to update the visible event
+    function updateCarousel() {
+      events.forEach((event, index) => {
+        if (index === currentIndex) {
+          event.style.display = "block";
+        } else {
+          event.style.display = "none";
+        }
+      });
+    }
+  
+    // Initial display setup
+    updateCarousel();
+  
+    // Event listeners for arrows
+    prevArrow.addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + events.length) % events.length;
+      updateCarousel();
+    });
+  
+    nextArrow.addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % events.length;
+      updateCarousel();
+    });
+  });
 
+
+  
