@@ -22,117 +22,28 @@ const countdown = () => {
   
 setInterval(countdown, 1000);
 
-const galleryContainer = document.querySelector('.gallery-container');
-const galleryControlsContainer = document.querySelector('.gallery-controls');
-const galleryControls = ['previous', 'next'];
-const galleryItems = document.querySelectorAll('.gallery-item');
 
-class Carousel {
-    constructor(container, items, controls) {
-      this.carouselContainer = container;
-      this.carouselControls = controls;
-      this.carouselArray = [...items];
-      this.autoScrollInterval = null;
-    }
-  
-    updateGallery() {
-      this.carouselArray.forEach(el => {
-        el.classList.remove('gallery-item-1');
-        el.classList.remove('gallery-item-2');
-        el.classList.remove('gallery-item-3');
-        el.classList.remove('gallery-item-4');
-        el.classList.remove('gallery-item-5');
-      });
-  
-      this.carouselArray.slice(0, 5).forEach((el, i) => {
-        el.classList.add(`gallery-item-${i+1}`);
-      });
-    }
-  
-    setCurrentState(direction) {
-      if (direction === 'next' || direction.className === 'gallery-controls-next') {
-        this.carouselArray.push(this.carouselArray.shift());
-      } else {
-        this.carouselArray.unshift(this.carouselArray.pop());
+const filterContainer = document.querySelector(".gallery-filter"),
+galleryItems = document.querySelectorAll(".gallery-item");
+
+filterContainer.addEventListener("click", (event) =>{
+  if(event.target.classList.contains("filter-item")){
+      // deactivate existing active 'filter-item'
+      filterContainer.querySelector(".active").classList.remove("active");
+      // activate new 'filter-item'
+      event.target.classList.add("active");
+      const filterValue = event.target.getAttribute("data-filter");
+      galleryItems.forEach((item) =>{
+      if(item.classList.contains(filterValue) || filterValue === 'all'){
+        item.classList.remove("hide");
+          item.classList.add("show");
       }
-      
-      this.updateGallery();
-    }
-  
-    setControls() {
-      this.carouselControls.forEach(control => {
-        galleryControlsContainer.appendChild(document.createElement('button')).className = `gallery-controls-${control}`;
-        document.querySelector(`.gallery-controls-${control}`).innerText = control;
+      else{
+        item.classList.remove("show");
+        item.classList.add("hide");
+      }
       });
-    }
-   
-    useControls() {
-      const triggers = [...galleryControlsContainer.childNodes];
-  
-      triggers.forEach(control => {
-        control.addEventListener('click', e => {
-          e.preventDefault();
-          this.setCurrentState(control);
-          this.resetAutoScroll();
-        });
-      });
-    }
-  
-    startAutoScroll() {
-      this.autoScrollInterval = setInterval(() => {
-        this.setCurrentState('next');
-      }, 5000);
-    }
-  
-    stopAutoScroll() {
-      clearInterval(this.autoScrollInterval);
-    }
-  
-    resetAutoScroll() {
-      this.stopAutoScroll();
-      this.startAutoScroll();
-    }
   }
-  
-  const exampleCarousel = new Carousel(galleryContainer, galleryItems, galleryControls);
-  
-  exampleCarousel.setControls();
-  exampleCarousel.useControls();
-  exampleCarousel.startAutoScroll();
-  
-  document.addEventListener("DOMContentLoaded", () => {
-    const eventGrid = document.querySelector(".event-grid");
-    const events = document.querySelectorAll(".event-card");
-    const prevArrow = document.querySelector(".prev-arrow");
-    const nextArrow = document.querySelector(".next-arrow");
-  
-    let currentIndex = 0;
-  
-    // Function to update the visible event
-    function updateCarousel() {
-      events.forEach((event, index) => {
-        if (index === currentIndex) {
-          event.style.display = "block";
-        } else {
-          event.style.display = "none";
-        }
-      });
-    }
-  
-    // Initial display setup
-    updateCarousel();
-  
-    // Event listeners for arrows
-    prevArrow.addEventListener("click", () => {
-      currentIndex = (currentIndex - 1 + events.length) % events.length;
-      updateCarousel();
-    });
-  
-    nextArrow.addEventListener("click", () => {
-      currentIndex = (currentIndex + 1) % events.length;
-      updateCarousel();
-    });
-  });
-
+});
 
   
