@@ -6,7 +6,7 @@ body {
   box-sizing: border-box;
   background: #1a1a1a;
   color: #fff;
-  background-color: #000;
+  background-color: #1a1a1a;
 }
 
 /* Header-Section */
@@ -56,13 +56,13 @@ nav ul {
 
 nav ul li {
   display: inline-block;
-  position: relative; /* Important for dropdown positioning */
+  position: relative;
 }
 
 nav ul li a {
   color: #fff;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 500;
   display: block;
   text-align: left;
@@ -180,20 +180,21 @@ nav ul .dropdown:hover .dropdown-menu {
 @import url('https://fonts.googleapis.com/css2?family-Roboto&display=swap');
 
 .marquee{
-  margin: 0;
+  margin-top: 40px;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Impact', sans-serif;
   display: flex;
   justify-content: flex-start;
   background: #ff6f61;
   overflow: hidden;
+  padding: 5px;
   box-shadow: 5px solid #000;
 }
 
 .marquee h1{
   font-size: 20px;
-  font-weight: bolder;
-  color: #fff;
+  font-weight: lighter;
+  color: #eeeff1;
   white-space: nowrap;
   padding: 0 0.5rem;
   letter-spacing: 1px;
@@ -226,24 +227,25 @@ nav ul .dropdown:hover .dropdown-menu {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden; /* Hide overflow */
-  max-width: 1320px; /* Adjust based on card width and gap */
-  margin: 0 auto; /* Center the container */
+  overflow: hidden; 
+  max-width: 1320px; 
+  margin: 0 auto;
 }
 
 .event-grid {
   display: flex;
-  gap: 20px; /* Space between cards */
-  scroll-behavior: smooth; /* Smooth scrolling */
-  width: calc(300px * 4 + 20px * 3); /* Fit exactly 4 cards */
-  overflow: hidden; /* Hide overflow */
+  gap: 20px; 
+  scroll-behavior: smooth; 
+  width: calc(300px * 4 + 20px * 3); 
+  overflow: hidden; 
 }
 
 .event-card {
-  flex: 0 0 auto; /* Prevent cards from shrinking or growing */
-  width: 300px; /* Fixed width for each card */
+  flex: 0 0 auto; 
+  width: 300px; 
   background: #eeeff1;
   transition: transform 0.3s ease-in-out;
+  margin-bottom: 50px;
 }
 
 .event-card:hover {
@@ -359,7 +361,7 @@ nav ul .dropdown:hover .dropdown-menu {
   border: none;
   padding: 10px;
   z-index: 100;
-  border-radius: 50%; /* Make arrows circular */
+  border-radius: 50%;
 }
 
 .left-arrow {
@@ -370,14 +372,13 @@ nav ul .dropdown:hover .dropdown-menu {
   right: 10px;
 }
 
-/* Hide scrollbar for a cleaner look */
 .event-grid::-webkit-scrollbar {
   display: none;
 }
 
 .event-grid {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
 }
 
 /* Gallery Section */
@@ -410,7 +411,7 @@ nav ul .dropdown:hover .dropdown-menu {
 
 .gallery-section .gallery-filter .filter-item{
 	color: #ffffff;
-	font-size: 18px;
+	font-size: 15px;
 	display: inline-block;
 	margin:0 10px;
 	cursor: pointer;

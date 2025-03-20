@@ -50,8 +50,8 @@ filterContainer.addEventListener("click", (event) =>{
 function moveSlide(direction) {
   const eventGrid = document.querySelector('.event-grid');
   const cardWidth = eventGrid.querySelector('.event-card').offsetWidth;
-  const gap = 20; // Gap between cards
-  const scrollAmount = (cardWidth + gap) * 1; // Scroll by 4 cards at a time
+  const gap = 20; 
+  const scrollAmount = (cardWidth + gap) * 1;
 
   eventGrid.scrollBy({
     left: direction * scrollAmount,
