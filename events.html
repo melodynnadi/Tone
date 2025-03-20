@@ -49,7 +49,43 @@
   <!-- Featured Events Section -->
   <section id="events" class="featured-events">
     <h2>Featured Events</h2>
-    <div class="event-grid">
+    <div class="event-container">
+      <button class="nav-arrow left-arrow" onclick="moveSlide(-1)">&#10094;</button>
+      <div class="event-grid">
+        <div class="event-card">
+          <div class="event-image">
+              <img src="patricks.jpg">
+          </div>
+          <div class="event-info">
+              <div class="event-details">
+                  <h3>Saint Patrick's Night</h3>
+                  <p>Irish cheer, green beer, and lucky vibes all night!</p>
+                  <div class="event-date">
+                      <i class="fa-solid fa-calendar-days" style="color: #ff6f61;"></i>
+                      <span>March 8th, 2025</span>
+                  </div>
+                  <div class="event-time">
+                    <i class="fa-regular fa-clock" style="color: #ff6f61;"></i>
+                    <span>08:00:00 PM</span>
+                  </div>
+                  <div class="event-location">
+                    <i class="fa-solid fa-location-dot" style="color: #ff6f61;"></i>
+                    <span>Warehouse Place</span>
+                  </div>
+              </div>
+          </div>
+          <div class="event-links">
+            <a class="left">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <span>Learn More</span>
+            </a>
+            <a class="right">
+              <i class="fa-solid fa-ticket-simple"></i>
+              <span>Get Tickets</span>
+            </a>
+          </div>            
+        </div>
+  
         <div class="event-card">
             <div class="event-image">
                 <img src="patricks.jpg">
@@ -83,7 +119,7 @@
               </a>
             </div>            
         </div>
-
+  
         <div class="event-card">
             <div class="event-image">
                 <img src="Valentine.jpg">
@@ -107,17 +143,13 @@
                 </div>
             </div>
             <div class="event-links">
-              <a class="left">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <span>Learn More</span>
-              </a>
               <a class="right">
                 <i class="fa-solid fa-images"></i>
                 <span>Gallery</span>
               </a>
             </div>            
         </div>
-
+  
         <div class="event-card">
             <div class="event-image">
                 <img src="Skiparty.jpg">
@@ -141,17 +173,13 @@
                 </div>
             </div>
             <div class="event-links">
-              <a class="left">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <span>Learn More</span>
-              </a>
               <a class="right">
                 <i class="fa-solid fa-images"></i>
                 <span>Gallery</span>
               </a>
             </div>            
         </div>
-
+  
         <div class="event-card">
           <div class="event-image">
               <img src="Halloween.JPG">
@@ -175,17 +203,16 @@
               </div>
           </div>
           <div class="event-links">
-            <a class="left">
-              <i class="fa-solid fa-magnifying-glass"></i>
-              <span>Learn More</span>
-            </a>
             <a class="right">
               <i class="fa-solid fa-images"></i>
               <span>Gallery</span>
             </a>
           </div>          
+        </div>
       </div>
+      <button class="nav-arrow right-arrow" onclick="moveSlide(1)">&#10095;</button>
     </div>
+  
   </section>
 
   <!-- Footer -->

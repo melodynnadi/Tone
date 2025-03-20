@@ -62,6 +62,7 @@ nav ul li {
 nav ul li a {
   color: #fff;
   text-decoration: none;
+  font-size: 18px;
   font-weight: 500;
   display: block;
   text-align: left;
@@ -212,7 +213,7 @@ nav ul .dropdown:hover .dropdown-menu {
 .featured-events {
   padding: 30px 20px;
   background-color: #1a1a1a;
-  text-align: left;
+  text-align: center;
 }
 
 .featured-events h2 {
@@ -220,20 +221,29 @@ nav ul .dropdown:hover .dropdown-menu {
   text-align: center;
 }
 
+.event-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Hide overflow */
+  max-width: 1320px; /* Adjust based on card width and gap */
+  margin: 0 auto; /* Center the container */
+}
+
 .event-grid {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+  gap: 20px; /* Space between cards */
+  scroll-behavior: smooth; /* Smooth scrolling */
+  width: calc(300px * 4 + 20px * 3); /* Fit exactly 4 cards */
+  overflow: hidden; /* Hide overflow */
 }
 
 .event-card {
+  flex: 0 0 auto; /* Prevent cards from shrinking or growing */
+  width: 300px; /* Fixed width for each card */
   background: #eeeff1;
-  overflow: hidden;
-  max-width: 300px;
   transition: transform 0.3s ease-in-out;
-  position: relative;
-  margin-bottom: 60px;
 }
 
 .event-card:hover {
@@ -339,6 +349,37 @@ nav ul .dropdown:hover .dropdown-menu {
   text-align: left;
 }
 
+.nav-arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  z-index: 100;
+  border-radius: 50%; /* Make arrows circular */
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
+
+/* Hide scrollbar for a cleaner look */
+.event-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.event-grid {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
 /* Gallery Section */
 .gallery-container{
 	max-width: 1170px;
@@ -362,23 +403,29 @@ nav ul .dropdown:hover .dropdown-menu {
 	text-align: center;
 	margin-bottom: 20px;
 }
+.gallery-section .gallery-filter span{
+  padding: 10px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
 .gallery-section .gallery-filter .filter-item{
 	color: #ffffff;
 	font-size: 18px;
-	text-transform: uppercase;
 	display: inline-block;
 	margin:0 10px;
 	cursor: pointer;
 	border-bottom: 2px solid transparent;
 	line-height: 1.2;
 	transition: all 0.3s ease;
+  background-color: #333;
 }
 .gallery-section .gallery-filter .filter-item.active{
-	color: #ff6f61;
-	border-color : #ff6f61;
+	color: #fff;
+  background-color: #ff6f61;
 }
+
 .gallery-section .gallery-item{
-	width: calc(100% / 5);
+	width: calc(100% / 4);
 	text-align: center;
 }
 
