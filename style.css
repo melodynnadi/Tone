@@ -481,6 +481,10 @@ nav ul li a:hover {
     margin-top: -15px;
   }
 
+  .featured-events h2 {
+    font-size: 15px;
+  }
+
   .event-date {
     margin-top: -10px;
     display: flex;
