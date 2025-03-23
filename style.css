@@ -203,6 +203,29 @@ nav ul li a:hover {
   font-size: 2rem;
 }
 
+.hero-socials {
+  margin-top: 7px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  list-style: none;
+  z-index: 2;
+}
+
+.hero-socials a{
+  font-size: 20px; /* Increase the font size */
+  text-decoration: none; /* Remove underline from links */
+  transition: 0.4s;
+}
+
+.hero-socials a i{
+  color: rgb(150, 150, 150);
+}
+
+.hero-socials a i:hover {
+  color: #ff6f61;
+}
+
 @media screen and (max-width: 800px){
   .hero{
     padding-left: 30px
@@ -243,25 +266,6 @@ nav ul li a:hover {
     font-size: 1.5rem;
     margin-top: -20px;
   }
-}
-
-.hero-socials {
-  margin-top: 7px;
-  display: flex;
-  gap: 15px; /* Add spacing between social icons */
-  justify-content: center; /* Center the social links */
-  list-style: none;
-}
-
-.hero-socials a {
-  color: #fff; /* Set the color to white */
-  font-size: 20px; /* Increase the font size */
-  text-decoration: none; /* Remove underline from links */
-  transition: transform 0.3s ease-in-out; /* Add hover effect */
-}
-
-.hero-socials a:hover {
-  transform: scale(1.2); /* Slight zoom effect on hover */
 }
 
 /* Marquee Container */
