@@ -482,7 +482,7 @@ nav ul li a:hover {
   }
 
   .event-image img {
-    height: 110px;
+    height: 130px;
   }
 
   .featured-events {
@@ -498,7 +498,11 @@ nav ul li a:hover {
 @media screen and (max-width: 350px){
   .event-card {
     width: 260px; 
-    height: 325px;
+    height: 340px;
+  }
+
+  .event-image img {
+    height: 130px;
   }
 
   .event-grid {
