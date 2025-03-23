@@ -84,13 +84,37 @@ nav ul li a:hover {
   z-index: 2;
 }
 
-@media screen and (max-width: 840px) {
-  nav ul li span{
-    display: none;
-  }
+.hamburger{
+  display: none;
+  cursor: pointer;
+}
 
-  .nav-menu li i{
+
+
+@media screen and (max-width: 800px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #000;
+    padding: 20px 0;
+  }
+  .nav-menu.active {
+    display: flex;
+  }
+  .hamburger {
     display: block;
+    cursor: pointer;
+  }
+  .hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    margin: 5px 0;
   }
 }
 
@@ -120,7 +144,7 @@ nav ul li a:hover {
 
 @media screen and (max-width: 350px){
   .logo img{
-    height: 25px;
+    height: 45px;
   }
 
   header{
