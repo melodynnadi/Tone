@@ -806,6 +806,100 @@ nav ul li a:hover {
   }
 }
 
+/* ContactForm-Section */
+
+.contact-section{
+  padding: 0 400px;
+  margin-bottom: 80px;
+  padding-top: 50px;
+}
+
+.contact-section h2{
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 40px;
+}
+
+.contact-section .group{
+  display: flex;
+  gap: 40px;
+  border: 2px solid rgb(212, 212, 212);
+  padding: 25px 25px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  margin-bottom: 20px;
+}
+
+.contact-section .group .text{
+  flex: 3;
+}
+
+.contact-section .group label{
+  font-weight: bolder;
+  font-size: large;
+}
+
+.contact-section .group form{
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-section .group form input,
+.contact-section .group form textarea{
+  font-family: 'Poppins', sans-serif;
+  border: 2px solid #fff;
+  resize: none;
+  margin-bottom: 15px;
+  padding: 10px;
+  outline: none;
+  background-color: transparent;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.contact-section .group form button{
+  font-size: 16px;
+  padding: 5px;
+  font-family: 'Poppins', sans-serif;
+  background-color: #ff6f61;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.contact-section .group form button:hover{
+  background-color: #e04e4c;
+}
+
+@media (max-width: 850px){
+
+  .contact-section{
+      padding: 0 80px;
+  }
+
+}
+
+@media (max-width: 1200px){
+  .contact-section{
+      padding: 0 250px;
+  }
+}
+
+@media (max-width: 740px){
+
+  .contact-section{
+      padding: 0 100px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .contact-section{
+      padding: 0 20px;
+  }
+}
+
 /* Footer-Section */
 footer {
   background: #000;

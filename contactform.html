@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>Team</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
@@ -34,43 +34,37 @@
       </nav>
     </header>
 
-  <!-- About-Section -->
-  <section id="about" class="about-section">
-      <h2>About Us</h2>
-      <div class="about-grid">
-        <div class="about-card">
-          <i class="fa-solid fa-book"></i>
-          <h3>MISSION</h3><br>
-          <hr>       
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis asperiores qui veniam officiis, itaque adipisci? Quibusdam architecto ea fugit totam ab maiores, quidem corporis quaerat quam. Dicta cupiditate rerum maiores.</p>
-        </div>
-    
-        <div class="about-card">
-          <i class="fa-solid fa-earth-americas"></i>
-          <h3>VISION</h3><br>
-          <hr>   
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis asperiores qui veniam officiis, itaque adipisci? Quibusdam architecto ea fugit totam ab maiores, quidem corporis quaerat quam. Dicta cupiditate rerum maiores.</p>
-        </div>
-    
-        <div class="about-card">
-          <i class="fa-solid fa-medal"></i>
-          <h3>ACHIEVEMENTS</h3><br>
-          <hr>       
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis asperiores qui veniam officiis, itaque adipisci? Quibusdam architecto ea fugit totam ab maiores, quidem corporis quaerat quam. Dicta cupiditate rerum maiores.</p>
-        </div>
-      </div>
+    <!-- ContactForm-Section -->
+    <section id="Contact" class="contact-section">
+    <h2>Send Us A Message!</h2>
+
+    <div class="group">
+        <form action="https://formspree.io/f/mldgwlgb" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" type="text" name="name" placeholder="Melody Nnadi" required>
+
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" placeholder="melodynnadi@gmail.com" required>
+
+            <label for="message">Message</label>
+            <textarea name="message" placeholder="Type your message here" required id="message" rows="5" cols="20"></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
     </div>
-  </section>
+
+    </section>
+  
 
   <!-- Footer -->
   <footer>
-    <div class="social-links">
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><img src="images/linktree.jpg" alt="Linktree" width="28px"></a>
-    </div>
-    <p>&copy; 2025 Tone Promotions. All rights reserved.</p>
-  </footer>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><img src="images/linktree.jpg" alt="Linktree" width="28px"></a>
+      </div>
+      <p>&copy; 2025 Tone Promotions. All rights reserved.</p>
+    </footer>
     
 <script src="script.js"></script>
 </body>
