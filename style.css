@@ -10,55 +10,55 @@ body {
 }
 
 /* Header-Section */
-header {
+nav{
+  position: fixed;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
+  height: 83px;
+  width: 100%;
   background: #000;
-  position: relative;
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
-}
-
-.logo {
-  display: flex;
   align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  z-index: 5;
 }
-
-.logo img {
-  height: 70px;
+nav .logo img{
+  width: 230px;
 }
-
-.logo h1 sup {
-  font-size: 10px;
-}
-
-nav ul {
-  list-style: none;
+nav ul{
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
+  list-style: none;
 }
-
-.nav-menu li i{
-  display: none;
+nav ul li{
+  margin: 0 0px;
+  font-size: 25px;
 }
-
-nav ul li a {
-  color: #fff;
+nav ul li a{
+  color: #f2f2f2;
   text-decoration: none;
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 17px;
+  font-weight: 300;
+  padding: 8px 15px;
+  letter-spacing: 1px;
 }
 
-nav ul li a:hover {
+nav ul li a:hover{
   color: #ff6f61;
 }
-
+nav .menu-btn i{
+  color: #fff;
+  font-size: 26px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
 .dropdown-menu {
   display: none;
   position: absolute;
   right: 0;
-  background: #333;
+  background: #000;
   padding: 10px 0;
   min-width: 150px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
@@ -75,64 +75,103 @@ nav ul li a:hover {
   background-color: transparent;
 }
 
-.dropdown-menu a:hover {
-  background-color: #444;
-}
-
 .dropdown:hover .dropdown-menu {
   display: block;
   z-index: 2;
 }
 
-@media screen and (max-width: 800px) {
-  .nav-menu li span{
-    display: none;
-  }
+nav i{
+  margin-right: 10px;
+}
 
-  .nav-menu li i{
+@media (max-width: 920px) {
+  nav .menu-btn i{
     display: block;
   }
-
-  .nav-menu li:nth-child(4){
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    top: 64px;
+    left: -115%;
+    background: #000;
+    height: 100vh;
+    width: 40%;
+    display: block;
+    transition: all 0.3s ease;
+    z-index: 3;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  .dropdown-menu {
     display: none;
+    position: absolute;
+    top: 100%; /* Position below the parent element */
+    left: 0; /* Align with the parent */
+    background: #000;
+    padding: 0px 0px;
+    font-size: 15px;
+    min-width: 0px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 3; /* Ensure visibility above other elements */
+    margin-left: 60px;
+  }
+  .dropdown-menu a {
+    display: block;
+    padding: 0px 0px;
+    color: #fff;
+    background-color: transparent;
+  }
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    z-index: 3;
+    position: relative; /* Adjust positioning for smaller screens */
+  }
+  nav ul li{
+    width: 100%;
+    margin: 10px 0;
+    text-align: left;
+    margin-left: -35px;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 25px;
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
   }
 
-  .nav-menu li:nth-child(5){
-    display: none;
+  nav ul li a:hover{
+    background: none;
+    color: #e04e4c;
   }
 }
 
-@media screen and (max-width: 500px){
-  .logo img{
-    height: 40px;
+@media (max-width: 500px){
+  nav .logo img{
+    width: 150px;
   }
 
-  header{
-    padding: 10px 5px;
+  nav ul{
+    top: 45px;
   }
-}
 
-@media screen and (max-width: 400px){
   nav ul li a{
     font-size: 15px;
   }
 
-  nav ul {
-    gap: 15px;
-  }
-
   nav{
-    margin-left: -50px;
+    height: 65px;
   }
 }
 
-@media screen and (max-width: 350px){
-  .logo img{
-    height: 45px;
-  }
-
-  header{
-    padding: 3px 5px;
+@media (max-width: 350px){
+  nav .logo img{
+    width: 120px;
   }
 }
 
@@ -150,6 +189,7 @@ nav ul li a:hover {
   position: relative;
   padding-left: 70px;
   z-index: 1;
+  padding-top: 60px;
 }
 
 .hero::before {
@@ -323,6 +363,7 @@ nav ul li a:hover {
 .featured-events {
   background-color: #1a1a1a;
   text-align: center;
+  padding-top: 120px;
 }
 
 .featured-events h2 {
@@ -465,6 +506,10 @@ nav ul li a:hover {
   .featured-events h2 {
     margin-top: 45px;
   }
+
+  .featured-events {
+    padding-top: 60px;
+  }
 }
 
 @media screen and (max-width: 500px){
@@ -552,6 +597,7 @@ nav ul li a:hover {
 .gallery-container{
 	max-width: 1170px;
 	margin:auto;
+  padding-top: 60px;
 }
 .row{
 	display: flex;
@@ -670,6 +716,7 @@ nav ul li a:hover {
   padding: 70px 20px 200px;
   background-color: #1a1a1a;
   text-align: left;
+  padding-top: 120px;
 }
 
 .about-grid {
@@ -736,10 +783,27 @@ nav ul li a:hover {
   padding: 0 20px; 
 }
 
+@media(max-width: 550px){
+  .about-section {;
+    padding-top: 60px;
+  }
+
+  .about-card p {
+    font-size: 12px; 
+  }
+
+  .about-section h2 {
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+
 /* Team-Section */
 .team-section{
   background: #1a1a1a;
   text-align: center;
+  padding-top: 60px;
 }
 
 .inner-width{
@@ -805,6 +869,16 @@ nav ul li a:hover {
   .pe{
     width: 100%;
   }
+
+  .team-section{
+    background: #1a1a1a;
+    text-align: center;
+    padding-top: 40px;
+  }
+
+  .team-section h1{
+    font-size: 35px;
+  }
 }
 
 /* ContactForm-Section */
@@ -812,7 +886,7 @@ nav ul li a:hover {
 .contact-section{
   padding: 0 400px;
   margin-bottom: 80px;
-  padding-top: 50px;
+  padding-top: 110px;
 }
 
 .contact-section h2{
@@ -822,6 +896,7 @@ nav ul li a:hover {
 }
 
 .contact-section .group{
+  background: #000;
   display: flex;
   gap: 40px;
   border: 2px solid rgb(212, 212, 212);
@@ -854,8 +929,7 @@ nav ul li a:hover {
   margin-bottom: 15px;
   padding: 10px;
   outline: none;
-  background-color: transparent;
-  border-radius: 5px;
+  background-color:#fff;
   color: #fff;
 }
 
@@ -865,7 +939,6 @@ nav ul li a:hover {
   font-family: 'Poppins', sans-serif;
   background-color: #ff6f61;
   border: none;
-  border-radius: 5px;
   color: #fff;
 }
 
@@ -907,7 +980,7 @@ footer {
   overflow: hidden;
   color: #fff;
   text-align: center;
-  padding: 20px;
+  padding: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
