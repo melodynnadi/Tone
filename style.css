@@ -789,7 +789,7 @@ nav i{
   }
 
   .about-card p {
-    font-size: 12px; 
+    font-size: 14px; 
   }
 
   .about-section h2 {
@@ -886,7 +886,7 @@ nav i{
 .contact-section{
   padding: 0 400px;
   margin-bottom: 80px;
-  padding-top: 110px;
+  padding-top: 120px;
 }
 
 .contact-section h2{
@@ -950,6 +950,7 @@ nav i{
 
   .contact-section{
       padding: 0 80px;
+      padding-top: 120px;
   }
 
 }
@@ -957,6 +958,7 @@ nav i{
 @media (max-width: 1200px){
   .contact-section{
       padding: 0 250px;
+      padding-top: 150px;
   }
 }
 
@@ -964,6 +966,7 @@ nav i{
 
   .contact-section{
       padding: 0 100px;
+      padding-top: 150px;
   }
 }
 
@@ -971,6 +974,13 @@ nav i{
 
   .contact-section{
       padding: 0 20px;
+      padding-top: 100px;
+  }
+
+  .contact-section h2{
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 30px;
   }
 }
 
