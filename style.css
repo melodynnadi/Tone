@@ -590,11 +590,11 @@ nav ul li a:hover {
 }
 
 .gallery-section .gallery-filter .filter-item:last-child{
-  background-color: #ff6f61;
+  background-color: #000;
 }
 
 .gallery-section .gallery-filter .filter-item:last-child:hover{
-  background-color: #e04e4c;
+  background-color: #444;
 }
 
 .gallery-section .gallery-filter .filter-item.active{
@@ -609,7 +609,8 @@ nav ul li a:hover {
 
 .gallery-section .gallery-item-inner img{
 	width: 100%;
-
+  height: auto;
+  display: block;
 }
 .gallery-section .gallery-item.show{
 	animation: fadeIn 0.5s ease;
